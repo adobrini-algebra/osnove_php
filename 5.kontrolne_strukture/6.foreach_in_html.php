@@ -44,7 +44,26 @@ $users = [
 </head>
 <body>
     <table>
-        <!-- ispisati sadrzaj niza $users u HTML tablicu -->
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Ime</th>
+                <th>Email</th>
+                <th>Godine</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($users as $user) : ?>
+                <?php if ($user['id'] == 1 || $user['id'] == 2 ) : ?>
+                    <tr>
+                        <td><?= $user['id'] ?></td>
+                        <td><?= $user['name'] ?></td>
+                        <td><?= $user['email'] ?></td>
+                        <td><?= $user['age'] ?></td>
+                    </tr>
+                <?php endif; ?>
+            <?php endforeach; ?>
+        </tbody>
     </table>
 </body>
 </html>

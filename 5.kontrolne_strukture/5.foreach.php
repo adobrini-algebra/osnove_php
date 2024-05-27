@@ -53,7 +53,7 @@ foreach($users as $key => $user){
     echo ++$key . '. ';
     echo $user['name'] . ' - ' . $user['email'];
     echo '<br>';
-    unset($users[--$key]['age']);//TODO: ponoviti i objasniti ovo unset($users[--$key])
+    unset($users[--$key]['age']);
 }
 
 echo '<pre>';
