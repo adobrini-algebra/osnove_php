@@ -1,30 +1,21 @@
 <?php
 
-$podaci = $_POST;
-
+// var_dump($_REQUEST);
 // var_dump($_POST);
-
-if( !empty($podaci) ){
-    echo 'Kliknuto na Posalji<br><br>';
-
-    $ime = $podaci['first_name'];
-    $prezime = $podaci['last_name'];
-
-    echo "Vase ime je $ime a przime $prezime.";
-
-}else{
-    echo 'Nije Kliknuto na Posalji';
-}
+var_dump($_GET);
 
 ?>
+
+<!-- primjer URL-a sa get parametrima -->
+<!-- get.php?objekt=stolica&subjekt=predavac&tko%20je%20zao=Microsoft -->
 
 <!DOCTYPE html>
 <html>
 <body>
 
-    <h2>HTML Forms</h2>
+    <h2>GET Superglobal</h2>
 
-    <form method="POST">
+    <form>
 
         <label for="first_name">Ime:</label><br>
         <input type="text" id="first_name" name="first_name"><br>
@@ -38,4 +29,3 @@ if( !empty($podaci) ){
 
 </body>
 </html>
-
